@@ -1,13 +1,19 @@
 # awesomecode-docker
 
- ## build
+## build
 
- ```
- docker build -t xinminlabs/awesomecode-docker:$(git rev-parse HEAD) .
- ```
+```
+docker build -t xinminlabs/awesomecode-docker:$(git rev-parse HEAD) .
+```
 
-  ## push
+## push
 
- ```
- docker push xinminlabs/awesomecode-docker:$(git rev-parse HEAD)
- ```
+```
+docker push xinminlabs/awesomecode-docker:$(git rev-parse HEAD)
+```
+
+## run
+
+```
+docker run xinminlabs/awesomecode-docker:$(git rev-parse HEAD) synvert --list
+```
