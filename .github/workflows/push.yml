@@ -10,10 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: docker build
-        run: docker build -t xinminlabs/awesomecode-docker:$GITHUB_SHA .
+        run: docker build -t xinminlabs/awesomecode-synvert:$GITHUB_SHA .
       - name: docker push
         run: |
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p "${{ secrets.DOCKER_PASSWORD }}"
-          docker push xinminlabs/awesomecode-docker:$GITHUB_SHA
-          docker tag xinminlabs/awesomecode-docker:$GITHUB_SHA xinminlabs/awesomecode-docker:latest
-          docker push xinminlabs/awesomecode-docker:latest
+          docker push xinminlabs/awesomecode-synvert:$GITHUB_SHA
+          docker tag xinminlabs/awesomecode-synvert:$GITHUB_SHA xinminlabs/awesomecode-synvert:latest
+          docker push xinminlabs/awesomecode-synvert:latest
