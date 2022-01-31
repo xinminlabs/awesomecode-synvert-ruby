@@ -1,4 +1,4 @@
-FROM ruby:3.0.2-alpine
+FROM ruby:3.1.0-alpine
 
 LABEL maintainer "Richard Huang flyerhzm@gmail.com"
 
